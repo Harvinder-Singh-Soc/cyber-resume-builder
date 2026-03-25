@@ -490,7 +490,7 @@ select option{background:var(--s2)}
             <div class="r-name" id="r-name">Your Name</div>
             <div class="r-title" id="r-title">Cybersecurity Professional</div>
             <div class="r-contact" id="r-contact">
-              <span class="r-contact-item">✉ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1d4dcd0d8ddf1d5dedcd0d8df9fd2dedc">[email&#160;protected]</a></span>
+              <span class="r-contact-item">✉ email@domain.com</span>
               <span class="r-contact-item">📞 +00 000 000 0000</span>
             </div>
           </div>
@@ -559,7 +559,7 @@ select option{background:var(--s2)}
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ===================== STATE =====================
 let techSkills=[],toolSkills=[],langSkills=[],softSkills=[];
 let experiences=[],educations=[],certs=[],projects=[],ctfEntries=[],publications=[];
@@ -1452,4 +1452,14 @@ function resetAll(){
   document.getElementById('certQuickPicks').innerHTML='';
   ['techSuggest','toolSuggest','langSuggest'].forEach(id=>document.getElementById(id).innerHTML='');
   render();updateScore();
-  goSec('personal',docume
+  goSec('personal',document.querySelector('[data-sec="personal"]'));
+}
+
+// ===================== INIT =====================
+document.addEventListener('DOMContentLoaded',()=>{
+  addExp();addEdu();
+  render();updateScore();
+});
+</script>
+</body>
+</html>
